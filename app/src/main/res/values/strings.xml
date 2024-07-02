@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">abc</string>
+    <string name="title">Yash Bhalodiya</string>
+    <string name="subtitle">123465984</string>
+    <string name="nameField">Name</string>
+    <string name="numberField">Number</string>
+    <string name="btn">Add</string>
+
+    <string name="todoTitleField">Title</string>
+    <string name="todoDescField">Description</string>
+    <string name="todoAddBtn">Add</string>
+    <string name="todotitle">This is title</string>
+    <string name="tododesc">This is desc</string>
+
+</resources>

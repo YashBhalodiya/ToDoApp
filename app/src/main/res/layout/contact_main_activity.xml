@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contact.HomeActivity">
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="380dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/nameField"
+        android:autofillHints="name"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberField"
+        android:layout_width="380dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/numberField"
+        android:autofillHints="phone"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/nameField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameField"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/btn"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/numberField"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/numberField"
+        app:layout_constraintTop_toBottomOf="@+id/numberField" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactRv"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/numberField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/numberField"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        tools:listitem="@layout/contact_list_model" />
+</androidx.constraintlayout.widget.ConstraintLayout>
