@@ -9,7 +9,6 @@ import com.yashbhalodiya.abc.databinding.TodoItemBinding
 
 class MainToDo : AppCompatActivity() {
     private lateinit var binding : MainTodoBinding
-    private lateinit var listBinding : TodoItemBinding
     private lateinit var dataList : ArrayList<ToDoModel>
     private lateinit var toDoAdapter: ToDoAdapter
 
@@ -31,15 +30,15 @@ class MainToDo : AppCompatActivity() {
 
         binding.todoAddBtn.setOnClickListener {
             Toast.makeText(this,"aidbf", Toast.LENGTH_SHORT).show()
-            var title = binding.todoTitleField.text.toString()
-            var desc = binding.todoDescriptionField.text.toString()
+            val title = binding.todoTitleField.text.toString()
+            val desc = binding.todoDescriptionField.text.toString()
 
             if (title.isEmpty()){
                 binding.todoTitleField.error = "Required"
             }else if(desc.isEmpty()){
                 binding.todoDescriptionField.error = "Required"
             }else{
-                var todo = ToDoModel(title, desc)
+                val todo = ToDoModel(title, desc)
                 dataList.add(todo)
                 toDoAdapter.notifyItemInserted(dataList.size - 1)
                 binding.todoTitleField.text.clear()
