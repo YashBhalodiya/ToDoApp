@@ -23,7 +23,11 @@ class MainToDo : AppCompatActivity() {
         dataList = ArrayList()
 
         //initialise adapter
-        toDoAdapter = ToDoAdapter(this, dataList)
+        toDoAdapter = ToDoAdapter(this, dataList){ position ->
+            dataList.removeAt(position)
+            toDoAdapter.notifyItemRemoved(position)
+            Toast.makeText(this, "Task Deleted", Toast.LENGTH_SHORT).show()
+        }
 
         binding.todoAddBtn.setOnClickListener {
             Toast.makeText(this,"aidbf", Toast.LENGTH_SHORT).show()
